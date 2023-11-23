@@ -1,0 +1,264 @@
+@charset "utf-8";
+@font-face {
+    font-family: font1;
+    src: url(fonts/The\ Centurion.otf);
+}
+
+body{
+    
+    margin: 0;
+    padding: 0;
+    background:#bebcbc;
+}
+
+.content9 h1{
+    left: 50%;
+    right: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 50px;   
+}
+
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: rgb(171, 169, 169);
+}
+
+.parallax{
+    font-weight: 900;
+    font-family: fonts1;
+    font-size: 30px;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 2.1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+}
+
+section.modulo{
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+section.modulo.content{
+    padding: 40px;
+    background: #bebcbc;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+section.modulo.parallax h1{
+    color: #0e0d0d;
+    text-shadow: 5px 5px 5px #f4f6f7;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 100;  /* prufundidade*/
+
+}
+
+section.modulo.parallax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0) 30%, #252323 100%);
+  /* background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0)30%, #252323 100%); */
+}
+
+@keyframes surgir {
+    from{
+        
+         opacity: 0; 
+         translate: -100vw 0; 
+    }
+
+    to{
+        
+         opacity: 1; 
+        translate: 0 0;
+    }
+
+
+    
+}
+section.modulo.parallax-1{
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_640.jpg);
+}
+section.modulo.parallax-2{
+    background-image: url(https://cdn.pixabay.com/photo/2018/01/24/19/49/friendship-day-3104635_640.jpg);
+}
+section.modulo.parallax-3{
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/26/02/47/man-2442565_640.jpg);
+}
+
+ .container{
+    margin-bottom: 100%;
+    box-shadow: 30px;
+    border-radius: 50px;
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 900px; 
+}
+
+.carrossel{
+    top: 400%;
+    padding-top: 40px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 120s infinite forwards linear;
+}
+
+.imagem{
+    transition: transform 1s;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 40px ;
+    position: fixed;
+    width: 290px;
+    height: 187px;
+    top: 75px;
+    left: 10px;
+    right: 10px;
+    background-size: cover; 
+    display: inline-block;
+}
+
+.imagem span{
+    bottom: 100%;
+    margin-top: auto;
+    font-size: 1.2em;
+    text-align:center;
+}
+
+@keyframes rotate360 {
+
+    form{
+        transform: rotateY(0deg);
+
+    }
+    
+    to{
+
+        transform: rotateY(-360deg);
+    }
+}
+
+.imagem:nth-child(1){ 
+    background-image: url(https://cdn.pixabay.com/photo/2016/02/11/19/14/couple-1194312_640.jpg);
+    transform: rotateY(0deg) translateZ(450px);
+}
+
+.imagem:nth-child(2){
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/23/15/09/woman-4873600_640.jpg);
+    transform: rotateY(40deg) translateZ(430px);
+}
+
+.imagem:nth-child(3){
+    background-image: url(https://cdn.pixabay.com/photo/2019/10/22/13/43/man-4568761_640.jpg);
+    transform: rotateY(80deg) translateZ(430px);
+}
+
+.imagem:nth-child(4){
+        background-image: url(https://cdn.pixabay.com/photo/2020/09/11/12/16/black-5562970_640.jpg);
+      transform: rotateY(120deg) translateZ(430px);
+}
+
+ .imagem:nth-child(5){
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/13/15/woman-1869762_640.jpg);
+    transform: rotateY(160deg) translateZ(430px);
+} 
+
+    .imagem:nth-child(6){
+    background-image: url(https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_640.jpg);
+    transform: rotateY(200deg) translateZ(430px);
+}
+ 
+.imagem:nth-child(7){
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/21/14/30/man-1845715_640.jpg); 
+    transform: rotateY(240deg) translateZ(430px); 
+}
+.imagem:nth-child(8){
+    background-image: url(https://cdn.pixabay.com/photo/2016/09/02/22/40/man-1640460_640.jpg);
+    transform: rotateY(280deg) translateZ(430px);
+ }
+
+  .imagem:nth-child(9){
+    background-image: url(https://cdn.pixabay.com/photo/2020/04/24/00/38/face-5084530_640.jpg);
+    transform: rotateY(320deg) translateZ(430px); 
+ } 
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media all and (max-width: 760px){
+   
+    section.modulo{
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 1em;
+} 
+
+  section.modulo.parallax h1 h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+ 
+ section.modulo.content{
+    width: 80%;
+    background: rgb(171, 169, 169);
+} 
+
+.carrossel{
+     text-align: center;
+     max-width: 50%;
+     width: 100px;
+     height: 100px;
+     position: absolute;
+
+ }
+}
+
+
